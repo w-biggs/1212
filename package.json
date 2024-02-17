@@ -13,5 +13,14 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.56.0",
+    "@stylistic/eslint-plugin": "^1.6.2",
+    "@types/eslint": "^8",
+    "@types/eslint__js": "^8",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.0.1"
   }
 }
