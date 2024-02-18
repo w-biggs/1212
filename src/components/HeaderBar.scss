@@ -1,0 +1,112 @@
+@use "/src/styles/variables" as *;
+
+.header {
+  padding: $pad 0;
+  grid-area: header;
+  height: $header-height;
+  border-bottom: 2px solid black;
+  display: flex;
+}
+
+.header-logo {
+  height: 100%;
+  position: relative;
+
+  img {
+    height: 100%;
+    display: block;
+  }
+
+  img[data-url*="462"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 115%;
+  }
+}
+
+.nav {
+  display: flex;
+  margin-left: auto;
+  background-color: transparent;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.nav-item > a {
+  color: inherit;
+
+  &:hover {
+    color: $faded;
+    text-decoration: none;
+  }
+}
+
+.nav-item.is-active > a {
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.nav-item:not(:first-of-type){
+  margin-left: 2rem;
+}
+
+.nav-expand {
+  display: none;
+}
+
+@media screen and (max-width: ($breakpoint-md - 0.00125rem)) {
+  .nav {
+    display: none;
+  }
+
+  .nav-expand {
+    font-size: ms(-1);
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    transition: background-color 0.15s ease;
+
+    &[aria-expanded='true'] {
+      background-color: $black;
+      color: white;
+    }
+
+    &:hover {
+      background-color: $placeholder-grey;
+      color: $black;
+    }
+  }
+
+  header ~ *{
+    display: none;
+  }
+
+  header.is-open-nav {
+    .nav {
+      position: fixed;
+      display: block;
+      top: $header-height + 0.5rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      padding: $pad 0.5rem;
+      z-index: 10;
+    }
+
+    .nav-item {
+      color: inherit;
+      text-decoration: none;
+      margin: 0 0 0.5rem 0;
+
+      &:hover {
+        color: $faded;
+      }
+    }
+  }
+}

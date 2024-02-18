@@ -1,27 +1,23 @@
 // @refresh reload
-import { createSignal } from 'solid-js';
-import './app.css';
+import { Component } from 'solid-js';
+import { FileRoutes } from '@solidjs/start';
+import { RouteSectionProps, Router } from '@solidjs/router';
+import HeaderBar from './components/HeaderBar';
+import './styles/global.scss';
 
-export default function App() {
-  const [count, setCount] = createSignal(0);
+const Layout: Component<RouteSectionProps> = (props) => (
+  <div class='container'>
+    <HeaderBar />
+    {props.children}
+  </div>
+);
 
+const App = () => {
   return (
-    <main>
-      <h1>Hello world!</h1>
-      <button class='increment' onClick={() => setCount(count() + 1)}>
-        Clicks:
-        {' '}
-        {count()}
-      </button>
-      <p>
-        Visit
-        {' '}
-        <a href='https://start.solidjs.com' target='_blank'>
-          start.solidjs.com
-        </a>
-        {' '}
-        to learn how to build SolidStart apps.
-      </p>
-    </main>
+    <Router root={Layout}>
+      <FileRoutes />
+    </Router>
   );
-}
+};
+
+export default App;

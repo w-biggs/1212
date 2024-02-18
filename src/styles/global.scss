@@ -1,0 +1,11 @@
+@use "base/misc" as *;
+@use "base/reboot" as *;
+@use "base/typography" as *;
+
+@use "variables" as *;
+
+.container {
+  max-width: $container-width;
+  padding: .5rem;
+  margin: 0 auto;
+}

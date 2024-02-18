@@ -4,10 +4,14 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start"
+    "start": "vinxi start",
+    "lint": "pnpm eslint .",
+    "format": "pnpm eslint . --fix"
   },
   "dependencies": {
+    "@solidjs/router": "^0.12.3",
     "@solidjs/start": "^0.5.9",
+    "ms-sass": "^1.0.0",
     "solid-js": "^1.8.15",
     "vinxi": "^0.2.1"
   },
@@ -20,7 +24,9 @@
     "@types/eslint": "^8",
     "@types/eslint__js": "^8",
     "eslint": "^8.56.0",
+    "sass": "^1.71.0",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.0.1"
-  }
+  },
+  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
 }

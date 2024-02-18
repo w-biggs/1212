@@ -1,0 +1,77 @@
+@use "../variables" as *;
+
+body{
+  font-family: $base-font-family;
+  font-size: 1em;
+}
+
+h1, .h1 {
+  font-size: ms(3);
+  font-weight: bold;
+}
+h2, .h2 {
+  font-size: ms(2);
+  font-weight: bold;
+}
+h3, .h3 {
+  font-size: ms(1);
+  font-weight: bold;
+}
+h4, .h4 {
+  font-size: ms(1);
+  font-weight: bold;
+}
+
+.is-disabled{
+  color: $faded !important;
+}
+
+.section-header{
+  font-size: ms(0);
+  font-family: $mono-font-family;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $faded;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $pad;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  font-display: swap;
+  src: local('HK Grotesk Regular'), local('HKGrotesk-Regular'),
+      url('~assets/fonts/HKGrotesk-Regular.woff2') format('woff2'),
+      url('~assets/fonts/HKGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  font-display: swap;
+  src: local('HK Grotesk Bold Italic'), local('HKGrotesk-BoldItalic'),
+      url('~assets/fonts/HKGrotesk-BoldItalic.woff2') format('woff2'),
+      url('~assets/fonts/HKGrotesk-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  font-display: swap;
+  src: local('HK Grotesk Italic'), local('HKGrotesk-Italic'),
+      url('~assets/fonts/HKGrotesk-Italic.woff2') format('woff2'),
+      url('~assets/fonts/HKGrotesk-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  font-display: swap;
+  src: local('HK Grotesk Bold'), local('HKGrotesk-Bold'),
+      url('~assets/fonts/HKGrotesk-Bold.woff2') format('woff2'),
+      url('~assets/fonts/HKGrotesk-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
